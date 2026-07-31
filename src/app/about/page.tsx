@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 
@@ -35,26 +36,20 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-navy text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeIn>
-            <p className="text-sm font-medium tracking-widest uppercase text-emerald mb-4">About Us</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl leading-tight">
-              Built from experience inside the industries we serve
-            </h1>
-            <p className="mt-6 text-lg text-slate-light max-w-2xl leading-relaxed">
-              Concord Leads wasn&apos;t born from a business plan. It was born from years of watching qualified sales teams lose deals to unqualified appointments.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About Us"
+        title="Built from experience inside the industries we serve"
+        description="Concord Leads wasn&apos;t born from a business plan. It was born from years of watching qualified sales teams lose deals to unqualified appointments."
+      />
 
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0c1728] py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_8%_18%,rgba(16,185,129,0.14),transparent_24%),radial-gradient(circle_at_94%_78%,rgba(30,41,59,0.95),transparent_30%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy mb-6">Our story</h2>
-              <div className="space-y-5 text-slate leading-relaxed">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-emerald">Our story</p>
+              <h2 className="mb-6 text-3xl font-bold text-white">Built for the conversations that move business forward.</h2>
+              <div className="space-y-5 text-slate-light leading-relaxed">
                 <p>
                   After spending years working inside Solar, Roofing, and Real Estate, one thing became obvious. Companies weren&apos;t losing sales because they lacked leads.
                 </p>
@@ -69,20 +64,24 @@ export default function AboutPage() {
                 </p>
               </div>
               <blockquote className="mt-8 border-l-4 border-emerald pl-6">
-                <p className="text-xl font-semibold text-navy">
+                <p className="text-xl font-semibold text-white">
                   &ldquo;We don&apos;t replace your sales team. We strengthen it.&rdquo;
                 </p>
               </blockquote>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="rounded-2xl bg-surface border border-border p-8">
-                <h3 className="text-xl font-bold text-navy mb-6">What we believe</h3>
-                <div className="space-y-6">
-                  {values.map((value) => (
-                    <div key={value.title}>
-                      <h4 className="font-semibold text-navy mb-1">{value.title}</h4>
-                      <p className="text-sm text-slate leading-relaxed">{value.description}</p>
+              <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-8 shadow-2xl shadow-black/20 backdrop-blur sm:p-10">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-emerald">Our operating principles</p>
+                <h3 className="mb-8 text-2xl font-bold text-white">What we believe</h3>
+                <div className="divide-y divide-white/10">
+                  {values.map((value, index) => (
+                    <div key={value.title} className="grid grid-cols-[auto_1fr] gap-4 py-5 first:pt-0 last:pb-0">
+                      <span className="mt-0.5 text-sm font-bold text-emerald">0{index + 1}</span>
+                      <div>
+                        <h4 className="mb-1 font-semibold text-white">{value.title}</h4>
+                        <p className="text-sm leading-relaxed text-slate-light">{value.description}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -92,11 +91,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+      <section className="relative overflow-hidden bg-[#102b32] py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.22),transparent_42%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeader
             title="Ready to strengthen your sales pipeline?"
             description="Book a discovery call and let's discuss how dedicated outbound teams can transform your appointment quality."
+            dark
           />
           <Button href="/contact" size="lg">
             Book Discovery Call

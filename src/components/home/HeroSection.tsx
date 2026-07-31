@@ -56,22 +56,25 @@ function AgentRow({ name, calls, appts, rank }: { name: string; calls: number; a
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-navy/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
+    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-navy">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(16,185,129,0.30),transparent_23%),radial-gradient(circle_at_10%_92%,rgba(30,41,59,0.95),transparent_36%),linear-gradient(115deg,#0f172a_0%,#101d32_52%,#0b2630_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+      <div className="absolute top-24 right-[8%] h-36 w-36 rounded-full border border-emerald/30" />
+      <div className="absolute top-40 right-[12%] h-3 w-3 rounded-full bg-emerald shadow-[0_0_0_12px_rgba(16,185,129,0.12)]" />
+      <div className="absolute bottom-0 left-0 h-1.5 w-full bg-gradient-to-r from-transparent via-emerald to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <FadeIn direction="left">
-            <p className="text-sm font-medium tracking-widest uppercase text-emerald-dark mb-4">
+            <p className="inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-white/10 px-4 py-2 text-xs font-semibold tracking-[0.16em] uppercase text-emerald-light shadow-sm mb-5">
+              <span className="h-2 w-2 rounded-full bg-emerald animate-pulse" />
               B2B Call Center & Appointment Setting
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy leading-[1.1]">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08]">
               Top-Tier Call Center Solutions That Deliver{" "}
-              <span className="gradient-text">Qualified Conversations.</span>
+              <span className="text-emerald">Qualified Conversations.</span>
             </h1>
-            <p className="mt-6 text-lg text-slate leading-relaxed max-w-xl">
+            <p className="mt-6 text-lg text-slate-light leading-relaxed max-w-xl">
               We help Solar, Roofing, and Real Estate businesses reduce customer acquisition costs by providing highly trained outbound teams that consistently generate qualified opportunities.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -82,9 +85,9 @@ export function HeroSection() {
                 Learn More
               </Button>
             </div>
-            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/15 pt-6">
               {trustBadges.map((badge) => (
-                <div key={badge} className="flex items-center gap-2 text-sm text-slate">
+                <div key={badge} className="flex items-center gap-2 text-sm text-slate-light">
                   <CheckCircle2 className="h-4 w-4 text-emerald flex-shrink-0" />
                   {badge}
                 </div>
@@ -94,7 +97,8 @@ export function HeroSection() {
 
           <FadeIn direction="right" delay={0.2}>
             <div className="relative">
-              <div className="dashboard-glow rounded-2xl border border-border bg-white p-5 sm:p-6">
+              <div className="absolute -inset-5 rounded-[2rem] bg-navy/5 blur-2xl" />
+              <div className="dashboard-glow relative rounded-2xl border border-white/90 bg-white/90 p-5 shadow-2xl shadow-navy/10 backdrop-blur sm:p-6">
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-2">
                     <BarChart3 className="h-5 w-5 text-emerald" />

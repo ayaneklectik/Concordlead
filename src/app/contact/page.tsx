@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, Phone, Clock, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { siteConfig } from "@/lib/constants";
 
@@ -19,19 +20,11 @@ const benefits = [
 export default function ContactPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-navy text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeIn>
-            <p className="text-sm font-medium tracking-widest uppercase text-emerald mb-4">Contact</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl leading-tight">
-              Let&apos;s start with a conversation
-            </h1>
-            <p className="mt-6 text-lg text-slate-light max-w-2xl leading-relaxed">
-              Book a discovery call and we&apos;ll show you exactly how a dedicated outbound team can transform your appointment quality.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Contact"
+        title="Let&apos;s start with a conversation"
+        description="Book a discovery call and we&apos;ll show you exactly how a dedicated outbound team can transform your appointment quality."
+      />
 
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

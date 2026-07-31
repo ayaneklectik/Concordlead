@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -10,14 +11,12 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-navy text-white">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <FadeIn>
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Terms of Service</h1>
-            <p className="mt-4 text-slate-light">Last updated: July 29, 2026</p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Legal"
+        title="Terms of Service"
+        description="Last updated: July 29, 2026"
+        narrow
+      />
 
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">

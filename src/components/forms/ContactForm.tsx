@@ -12,13 +12,29 @@ const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:0
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const response = await fetch("/api/discovery-call", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+    } else {
+      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+      setError(result?.error ?? "We couldn't submit your request. Please try again.");
+    }
+
     setLoading(false);
-    setSubmitted(true);
   };
 
   if (submitted) {
@@ -122,6 +138,12 @@ export function ContactForm() {
         <label htmlFor="notes" className="block text-sm font-medium text-navy mb-1.5">Additional Notes</label>
         <textarea id="notes" name="notes" rows={3} className="form-input resize-none" placeholder="Tell us about your goals, current challenges, or questions..." />
       </div>
+
+      {error && (
+        <p role="alert" className="text-sm text-red-600">
+          {error}
+        </p>
+      )}
 
       <Button type="submit" size="lg" className="w-full" disabled={loading}>
         {loading ? "Submitting..." : "Book Discovery Call"}

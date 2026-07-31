@@ -3,8 +3,8 @@ export const siteConfig = {
   tagline: "Top-Tier Call Center Solutions That Deliver Qualified Conversations.",
   description:
     "Concord Leads helps Solar, Roofing, and Real Estate businesses reduce customer acquisition costs with dedicated outbound teams that generate qualified appointments.",
-  email: "hello@concordleads.com",
-  phone: "(555) 847-2900",
+  email: "concordleads2026@gmail.com",
+  phone: "+8801820350351",
   hours: "Mon–Fri, 8:00 AM – 6:00 PM EST",
   linkedin: "https://linkedin.com/company/concord-leads",
   calendlyUrl: "https://calendly.com/concord-leads/discovery",

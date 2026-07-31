@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PhoneOutgoing, CalendarCheck, Headphones } from "lucide-react";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
+import { StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { services } from "@/lib/constants";
@@ -16,19 +17,11 @@ const iconMap = { PhoneOutgoing, CalendarCheck, Headphones };
 export default function ServicesPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-navy text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeIn>
-            <p className="text-sm font-medium tracking-widest uppercase text-emerald mb-4">Services</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl leading-tight">
-              Three services. One goal: qualified conversations.
-            </h1>
-            <p className="mt-6 text-lg text-slate-light max-w-2xl leading-relaxed">
-              Every service we offer is designed to fill your calendar with prospects who are ready to talk — not just names on a list.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Services"
+        title="Three services. One goal: qualified conversations."
+        description="Every service we offer is designed to fill your calendar with prospects who are ready to talk — not just names on a list."
+      />
 
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

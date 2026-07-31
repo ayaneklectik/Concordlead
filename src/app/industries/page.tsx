@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sun, Home, Building2, CheckCircle2 } from "lucide-react";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
+import { StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { industries } from "@/lib/constants";
@@ -16,19 +17,11 @@ const iconMap = { Sun, Home, Building2 };
 export default function IndustriesPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-navy text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeIn>
-            <p className="text-sm font-medium tracking-widest uppercase text-emerald mb-4">Industries</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl leading-tight">
-              Deep expertise in the markets that matter
-            </h1>
-            <p className="mt-6 text-lg text-slate-light max-w-2xl leading-relaxed">
-              Our agents aren&apos;t generalists. They&apos;re trained specifically for the sales cycles, objections, and qualification criteria of your industry.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Industries"
+        title="Deep expertise in the markets that matter"
+        description="Our agents aren&apos;t generalists. They&apos;re trained specifically for the sales cycles, objections, and qualification criteria of your industry."
+      />
 
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
