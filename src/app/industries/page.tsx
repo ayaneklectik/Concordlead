@@ -23,7 +23,7 @@ export default function IndustriesPage() {
         description="Our agents aren&apos;t generalists. They&apos;re trained specifically for the sales cycles, objections, and qualification criteria of your industry."
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <StaggerContainer className="space-y-20">
             {industries.map((industry, index) => {

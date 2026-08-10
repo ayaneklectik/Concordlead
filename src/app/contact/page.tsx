@@ -26,7 +26,7 @@ export default function ContactPage() {
         description="Book a discovery call and we&apos;ll show you exactly how a dedicated outbound team can transform your appointment quality."
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <FadeIn direction="left">

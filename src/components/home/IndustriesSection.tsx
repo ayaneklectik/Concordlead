@@ -16,7 +16,7 @@ export function IndustriesSection() {
   const active = industries.find((i) => i.id === activeId)!;
 
   return (
-    <section id="industries" className="py-24 lg:py-32 bg-white">
+    <section id="industries" className="py-24 lg:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           eyebrow="Industries"

@@ -14,7 +14,7 @@ const benefits = [
 
 export function DiscoveryCallSection() {
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-white">
+    <section id="contact" className="py-24 lg:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <FadeIn direction="left">

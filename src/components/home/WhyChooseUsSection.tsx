@@ -27,7 +27,7 @@ const illustrationIcons = {
 
 export function WhyChooseUsSection() {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section className="py-24 lg:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           eyebrow="Why Choose Us"

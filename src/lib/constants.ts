@@ -28,7 +28,7 @@ export const trustStats = [
   { value: 5, suffix: " Days", prefix: "3–", label: "Average Campaign Launch" },
   { value: 0, suffix: "", prefix: "Daily", label: "Performance Reporting", isText: true },
   { value: 100, suffix: "%", prefix: "", label: "Dedicated Teams" },
-  { value: 0, suffix: "", prefix: "US", label: "Nationwide Coverage", isText: true },
+  { value: 0, suffix: "", prefix: "US & Canada", label: "Nationwide Coverage", isText: true },
 ];
 
 export const services = [

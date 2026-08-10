@@ -23,7 +23,7 @@ export default function ServicesPage() {
         description="Every service we offer is designed to fill your calendar with prospects who are ready to talk — not just names on a list."
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <StaggerContainer className="space-y-16">
             {services.map((service, index) => {

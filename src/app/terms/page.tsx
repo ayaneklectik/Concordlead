@@ -18,7 +18,7 @@ export default function TermsPage() {
         narrow
       />
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <FadeIn>
             <div className="space-y-8 text-slate leading-relaxed">

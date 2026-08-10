@@ -39,7 +39,7 @@ const contrasts = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-white">
+    <section id="about" className="py-24 lg:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           eyebrow="About Us"
