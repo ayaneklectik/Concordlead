@@ -1,3 +1,6 @@
+Replace the entire file with this:
+
+```tsx
 "use client";
 
 import { useState } from "react";
@@ -21,20 +24,21 @@ export function ProcessSection() {
 
         <FadeIn>
           <div className="relative mt-8">
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-white/10 -translate-y-1/2" />
+            <div className="hidden lg:block absolute top-3 left-0 right-0 h-px bg-white/10" />
 
-            <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 overflow-x-auto pb-4 lg:pb-0 snap-x snap-mandatory">
+            <div className="flex flex-col items-stretch gap-4 lg:flex-row lg:gap-0 lg:pt-3">
               {processSteps.map((step, index) => {
                 const isHovered = hoveredIndex === index;
+
                 return (
                   <motion.div
                     key={step.title}
-                    className="flex-shrink-0 lg:flex-1 snap-start"
+                    className="flex-shrink-0 lg:min-w-0 lg:flex-1"
                     onHoverStart={() => setHoveredIndex(index)}
                     onHoverEnd={() => setHoveredIndex(null)}
                   >
                     <div
-                      className={`relative mx-2 lg:mx-1 rounded-2xl border p-5 transition-all duration-300 cursor-default ${
+                      className={`relative h-full rounded-2xl border p-5 transition-all duration-300 cursor-default lg:mx-1 ${
                         isHovered
                           ? "border-emerald bg-white/10 shadow-lg shadow-emerald/10"
                           : "border-white/10 bg-white/5"
@@ -44,15 +48,24 @@ export function ProcessSection() {
                         {index + 1}
                       </div>
 
-                      <p className="text-xs font-medium text-emerald mb-1 lg:mt-2">{step.duration}</p>
-                      <h3 className="text-sm font-bold text-white mb-2">{step.title}</h3>
+                      <p className="text-xs font-medium text-emerald mb-1 lg:mt-2">
+                        {step.duration}
+                      </p>
+                      <h3 className="text-sm font-bold text-white mb-2">
+                        {step.title}
+                      </h3>
 
                       <motion.div
                         initial={false}
-                        animate={{ height: isHovered ? "auto" : 0, opacity: isHovered ? 1 : 0 }}
+                        animate={{
+                          height: isHovered ? "auto" : 0,
+                          opacity: isHovered ? 1 : 0,
+                        }}
                         className="overflow-hidden"
                       >
-                        <p className="text-xs text-slate-light leading-relaxed pt-1">{step.description}</p>
+                        <p className="text-xs text-slate-light leading-relaxed pt-1">
+                          {step.description}
+                        </p>
                       </motion.div>
                     </div>
                   </motion.div>
@@ -81,3 +94,4 @@ export function ProcessSection() {
     </section>
   );
 }
+```
