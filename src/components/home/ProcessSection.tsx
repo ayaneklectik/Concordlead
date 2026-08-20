@@ -1,6 +1,3 @@
-Replace the entire file with this:
-
-```tsx
 "use client";
 
 import { useState } from "react";
