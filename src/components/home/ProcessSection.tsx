@@ -48,6 +48,7 @@ export function ProcessSection() {
                       <p className="text-xs font-medium text-emerald mb-1 lg:mt-2">
                         {step.duration}
                       </p>
+
                       <h3 className="text-sm font-bold text-white mb-2">
                         {step.title}
                       </h3>
@@ -91,4 +92,3 @@ export function ProcessSection() {
     </section>
   );
 }
-```
