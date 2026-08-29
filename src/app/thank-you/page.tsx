@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <section className="relative min-h-[80vh] overflow-hidden bg-navy flex items-center pt-24 pb-16">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_18%,rgba(102,163,191,0.42),transparent_24%),radial-gradient(circle_at_12%_88%,rgba(51,104,160,0.9),transparent_36%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_18%,rgba(217,155,127,0.32),transparent_24%),radial-gradient(circle_at_12%_88%,rgba(15,48,64,0.9),transparent_36%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:44px_44px]" />
       <div className="absolute bottom-0 left-0 h-1.5 w-full bg-gradient-to-r from-transparent via-emerald to-transparent" />
       <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <FadeIn>
-          <div className="flex h-20 w-20 items-center justify-center rounded-full border border-emerald/30 bg-emerald/15 text-emerald mx-auto mb-8 shadow-[0_0_0_12px_rgba(102,163,191,0.16)]">
+          <div className="flex h-20 w-20 items-center justify-center rounded-full border border-emerald/30 bg-emerald/15 text-emerald mx-auto mb-8 shadow-[0_0_0_12px_rgba(217,155,127,0.18)]">
             <CheckCircle2 className="h-10 w-10" />
           </div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-light">Request received</p>
