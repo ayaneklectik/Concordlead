@@ -7,7 +7,7 @@ export const siteConfig = {
   phone: "+8801820350351",
   hours: "Mon–Fri, 8:00 AM – 6:00 PM EST",
   linkedin: "https://linkedin.com/company/concord-leads",
-  calendlyUrl: "https://calendly.com/concord-leads/discovery",
+  bookingUrl: "https://cal.com/eklectikbbx-umdcws/discovery-call-with-concord-leads",
 };
 
 export const navLinks = [
