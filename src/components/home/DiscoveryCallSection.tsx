@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Calendar, CheckCircle2, Clock, Users } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ContactForm } from "@/components/forms/ContactForm";
+import { CalBookingEmbed } from "@/components/forms/CalBookingEmbed";
 
 const benefits = [
   "30-minute strategy session with our team",
@@ -72,7 +72,7 @@ export function DiscoveryCallSection() {
           </FadeIn>
 
           <FadeIn direction="right" delay={0.2}>
-            <ContactForm />
+            <CalBookingEmbed />
           </FadeIn>
         </div>
       </div>
