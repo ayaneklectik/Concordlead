@@ -58,7 +58,7 @@ export default function ContactPage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2}>
-              <ContactForm />
+              <CalBookingEmbed />
             </FadeIn>
           </div>
         </div>
