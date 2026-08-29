@@ -42,8 +42,8 @@ export default function AboutPage() {
         description="Concord Leads wasn&apos;t born from a business plan. It was born from years of watching qualified sales teams lose deals to unqualified appointments."
       />
 
-      <section className="relative overflow-hidden bg-[#3368A0] py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_8%_18%,rgba(102,163,191,0.35),transparent_24%),radial-gradient(circle_at_94%_78%,rgba(51,104,160,0.95),transparent_30%)]" />
+      <section className="relative overflow-hidden bg-[#0F3040] py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_8%_18%,rgba(217,155,127,0.28),transparent_24%),radial-gradient(circle_at_94%_78%,rgba(15,48,64,0.95),transparent_30%)]" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <FadeIn>
@@ -91,8 +91,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#3368A0] py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(102,163,191,0.45),transparent_42%)]" />
+      <section className="relative overflow-hidden bg-[#0F3040] py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,155,127,0.35),transparent_42%)]" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeader
             title="Ready to strengthen your sales pipeline?"
