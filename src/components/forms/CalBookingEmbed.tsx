@@ -19,7 +19,6 @@ declare global {
   }
 }
 
-/** Loads the vendor-provided Cal.com inline scheduler after this component mounts. */
 export function CalBookingEmbed() {
   useEffect(() => {
     const C = window;
@@ -29,21 +28,27 @@ export function CalBookingEmbed() {
     C.Cal = C.Cal || function (...args: unknown[]) {
       const cal = C.Cal as CalFunction;
       const ar = args;
+
       if (!cal.loaded) {
         cal.ns = {};
         cal.q = cal.q || [];
+
         const script = document.createElement("script");
         script.src = A;
         script.async = true;
         document.head.appendChild(script);
+
         cal.loaded = true;
       }
+
       if (ar[0] === L) {
         const api = function (...apiArgs: unknown[]) {
           api.q?.push(apiArgs);
         } as CalFunction;
+
         const requestedNamespace = ar[1];
         api.q = api.q || [];
+
         if (typeof requestedNamespace === "string") {
           cal.ns![requestedNamespace] = cal.ns![requestedNamespace] || api;
           cal.ns![requestedNamespace].q?.push(ar);
@@ -51,15 +56,19 @@ export function CalBookingEmbed() {
         } else {
           cal.q?.push(ar);
         }
+
         return;
       }
+
       cal.q?.push(ar);
     };
 
     const cal = C.Cal;
+
     cal("init", namespace, { origin: "https://app.cal.com" });
     cal.config = cal.config || {};
     cal.config.forwardQueryParams = true;
+
     cal.ns?.[namespace]?.("inline", {
       elementOrSelector: "#cal-discovery-call",
       config: {
@@ -69,6 +78,7 @@ export function CalBookingEmbed() {
       },
       calLink: "eklectikbbx-umdcws/discovery-call-with-concord-leads",
     });
+
     cal.ns?.[namespace]?.("ui", {
       theme: "dark",
       hideEventTypeDetails: false,
@@ -79,6 +89,7 @@ export function CalBookingEmbed() {
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-navy p-1 shadow-xl shadow-navy/10">
       <div id="cal-discovery-call" className="h-[720px] w-full overflow-auto" />
+
       <p className="px-5 py-3 text-center text-sm text-slate-light">
         Having trouble loading the calendar?{" "}
         <a href={siteConfig.bookingUrl} className="text-emerald-light hover:underline">
