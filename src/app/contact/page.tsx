@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Mail, Phone, Clock, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { PageHero } from "@/components/ui/PageHero";
-import { ContactForm } from "@/components/forms/ContactForm";
+import { CalBookingEmbed } from "@/components/forms/CalBookingEmbed";
 import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
