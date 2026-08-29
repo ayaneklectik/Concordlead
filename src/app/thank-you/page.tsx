@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { CheckCircle2, Calendar, ArrowRight } from "lucide-react";
+import { CheckCircle2, Calendar } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/constants";
+import { CalBookingEmbed } from "@/components/forms/CalBookingEmbed";
 
 export const metadata: Metadata = {
   title: "Thank You",
@@ -15,7 +16,7 @@ export default function ThankYouPage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_18%,rgba(16,185,129,0.28),transparent_24%),radial-gradient(circle_at_12%_88%,rgba(30,41,59,0.9),transparent_36%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:44px_44px]" />
       <div className="absolute bottom-0 left-0 h-1.5 w-full bg-gradient-to-r from-transparent via-emerald to-transparent" />
-      <div className="relative mx-auto max-w-2xl px-6 lg:px-8 text-center">
+      <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <FadeIn>
           <div className="flex h-20 w-20 items-center justify-center rounded-full border border-emerald/30 bg-emerald/15 text-emerald mx-auto mb-8 shadow-[0_0_0_12px_rgba(16,185,129,0.08)]">
             <CheckCircle2 className="h-10 w-10" />
@@ -36,10 +37,7 @@ export default function ThankYouPage() {
             <p className="text-sm text-slate mb-6">
               Pick a time that works for you. Our discovery calls are 30 minutes and cover your business goals, campaign strategy, and next steps.
             </p>
-            <Button href={siteConfig.calendlyUrl} size="lg" className="w-full sm:w-auto">
-              Schedule via Calendly
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            <CalBookingEmbed />
           </div>
 
           <p className="text-sm text-slate-light">
