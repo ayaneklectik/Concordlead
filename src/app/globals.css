@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #e8eef5;
-  --foreground: #0f172a;
-  --navy: #0f172a;
-  --navy-light: #1e293b;
-  --slate: #64748b;
-  --slate-light: #94a3b8;
-  --emerald: #10b981;
-  --emerald-dark: #059669;
-  --emerald-light: #d1fae5;
-  --surface: #dfe7f0;
-  --border: #cbd7e4;
+  --background: #f2efe7;
+  --foreground: #3368a0;
+  --navy: #3368a0;
+  --navy-light: #66a3bf;
+  --slate: #3368a0;
+  --slate-light: #66a3bf;
+  --emerald: #66a3bf;
+  --emerald-dark: #3368a0;
+  --emerald-light: #c8dfdb;
+  --surface: #c8dfdb;
+  --border: #66a3bf;
 }
 
 @theme inline {
@@ -46,7 +46,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0f172a 0%, #334155 50%, #059669 100%);
+  background: linear-gradient(135deg, #3368a0 0%, #66a3bf 50%, #c8dfdb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -59,21 +59,21 @@ body {
 }
 
 .glass-dark {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(51, 104, 160, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .grid-pattern {
-  background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, #c8dfdb 1px, transparent 0);
   background-size: 32px 32px;
 }
 
 .dashboard-glow {
   box-shadow:
-    0 0 0 1px rgba(16, 185, 129, 0.1),
-    0 20px 60px -12px rgba(15, 23, 42, 0.15),
-    0 8px 24px -8px rgba(16, 185, 129, 0.08);
+    0 0 0 1px rgba(102, 163, 191, 0.2),
+    0 20px 60px -12px rgba(51, 104, 160, 0.2),
+    0 8px 24px -8px rgba(102, 163, 191, 0.16);
 }
 
 .form-input {
@@ -90,7 +90,7 @@ body {
 .form-input:focus {
   outline: none;
   border-color: var(--emerald);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 0 3px rgba(102, 163, 191, 0.25);
 }
 
 .form-input::placeholder {
